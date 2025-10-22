@@ -163,7 +163,7 @@ except Exception as e:
 # --- 3. MODEL LOADING AND TRAINING (KNN Fix Implemented) ---
 
 try:
-    df = pd.read_csv('Crop_recommendation.csv')
+    df = pd.read_csv('crop_recommendation.csv')
     X = df[['N', 'P','K','temperature', 'humidity', 'ph', 'rainfall']]
     y_raw = df['label'] # Keep raw labels for mapping
 
@@ -312,4 +312,5 @@ def main():
                 st.info(f"The recommended crop, **{prediction.upper()}**, is optimal for these soil and climate conditions.")
 
 if __name__ == '__main__':
+
     main()
